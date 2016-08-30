@@ -1,0 +1,19 @@
+{
+  "name": "ESCountdown",
+  "version": "0.0.0",
+  "description": "boh",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p dist && ./node_modules/.bin/browserify -t babelify -o dist/bundle.js -e src/index.js & ./node_modules/.bin/node-sass src/style.scss > dist/style.css & cp {src,dist}/index.html"
+  },
+  "author": "taye <dev@taye.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "simple-ajax": "^2.6.0",
+    "underscore": "^1.8.3"
+  }
+}

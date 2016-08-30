@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.countdown-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  font-family: "Fira Mono", "Liberation Mono", "Lucida Console", monospace;
+  font-size: 18vw; }
+
+.countdown-value {
+  display: block;
+  margin: auto;
+  line-height: 1em;
+  text-align: center; }
+
+.countdown-title {
+  display: inline-block;
+  position: absolute;
+  bottom: 0.25em;
+  right: 1em;
+  text-align: right;
+  font-size: 0.25em;
+  font-style: italic; }
+
+.countdown-container.ending .countdown-value {
+  color: #f00; }
+
+.countdown-container.ending.countdown-title {
+  color: #888; }
+
+.countdown-container.early .countdown-title::before {
+  content: "Next: ";
+  font-style: normal; }
+
+.countdown-value, .countdown-title {
+  transition: color 0.3s; }
+
